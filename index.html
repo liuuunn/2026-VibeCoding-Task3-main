@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專業記帳工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>試算表記帳系統</h1>
+        
+        <div id="auth-section">
+            <button id="login-btn" onclick="handleAuthClick()">透過 Google 登入</button>
+            <button id="logout-btn" onclick="handleSignoutClick()" style="display:none;">登出</button>
+        </div>
+
+        <div id="main-form" class="card" style="display:none;">
+            <div class="form-group">
+                <label>記帳人</label>
+                <input type="text" id="user-name" placeholder="請輸入姓名" value="劉">
+            </div>
+
+            <div class="form-group">
+                <label>選擇帳戶</label>
+                <select id="select-account" onchange="onAccountChange()">
+                    <option value="">載入中...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>帳務類型</label>
+                <select id="select-type" onchange="onTypeChange()">
+                    <option value="">請先選擇帳戶</option>
+                </select>
+            </div>
+
+            <div id="payment-section" class="form-group">
+                <label>付款方式</label>
+                <select id="select-method">
+                    <option value="">請先選擇類型</option>
+                </select>
+            </div>
+
+            <hr>
+
+            <div class="form-group">
+                <label>現金金額</label>
+                <input type="number" id="amt-cash" value="0">
+            </div>
+            <div class="form-group">
+                <label>轉帳金額</label>
+                <input type="number" id="amt-transfer" value="0">
+            </div>
+            <div class="form-group">
+                <label>刷卡金額</label>
+                <input type="number" id="amt-card" value="0">
+            </div>
+
+            <button id="submit-btn" class="primary-btn" onclick="submitRecord()">提交紀錄</button>
+            <p id="status-msg"></p>
+        </div>
+    </div>
+
+    <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+    <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+    <script src="script.js"></script>
+</body>
+</html>
