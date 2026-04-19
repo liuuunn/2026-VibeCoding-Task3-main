@@ -1,6 +1,5 @@
 /* === 設定區 === */
 const CLIENT_ID = '633137684724-s978llvgf4q7otjqb7rn20bimfa61dbk.apps.googleusercontent.com';
-const API_KEY = '你的_GOOGLE_API_KEY';
 const SPREADSHEET_ID = '1S3VLZ1ZhqNmZJzA4kLoZF--a4AaQiEmm-Mgp3-BkrDY'; // 從 URL 取得，例如 1abc123...
 /* ============== */
 
