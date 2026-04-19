@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>專業記帳工具</title>
+    <title>專業記帳工具 (No API Key)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,20 +11,20 @@
         <h1>試算表記帳系統</h1>
         
         <div id="auth-section">
-            <button id="login-btn" onclick="handleAuthClick()">透過 Google 登入</button>
+            <button id="login-btn" onclick="handleAuthClick()">Google 帳號登入</button>
             <button id="logout-btn" onclick="handleSignoutClick()" style="display:none;">登出</button>
         </div>
 
         <div id="main-form" class="card" style="display:none;">
             <div class="form-group">
                 <label>記帳人</label>
-                <input type="text" id="user-name" placeholder="請輸入姓名" value="劉">
+                <input type="text" id="user-name" value="劉">
             </div>
 
             <div class="form-group">
                 <label>選擇帳戶</label>
                 <select id="select-account" onchange="onAccountChange()">
-                    <option value="">載入中...</option>
+                    <option value="">正在同步雲端資料...</option>
                 </select>
             </div>
 
@@ -44,17 +44,19 @@
 
             <hr>
 
-            <div class="form-group">
-                <label>現金金額</label>
-                <input type="number" id="amt-cash" value="0">
-            </div>
-            <div class="form-group">
-                <label>轉帳金額</label>
-                <input type="number" id="amt-transfer" value="0">
-            </div>
-            <div class="form-group">
-                <label>刷卡金額</label>
-                <input type="number" id="amt-card" value="0">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>現金金額</label>
+                    <input type="number" id="amt-cash" value="0">
+                </div>
+                <div class="form-group">
+                    <label>轉帳金額</label>
+                    <input type="number" id="amt-transfer" value="0">
+                </div>
+                <div class="form-group">
+                    <label>刷卡金額</label>
+                    <input type="number" id="amt-card" value="0">
+                </div>
             </div>
 
             <button id="submit-btn" class="primary-btn" onclick="submitRecord()">提交紀錄</button>
