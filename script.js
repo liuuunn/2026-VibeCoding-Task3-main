@@ -1,7 +1,7 @@
 /** * 請填寫以下資訊 
  */
-const CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com';
-const SPREADSHEET_ID = 'YOUR_SPREADSHEET_ID';
+const CLIENT_ID = '633137684724-s978llvgf4q7otjqb7rn20bimfa61dbk.apps.googleusercontent.com';
+const SPREADSHEET_ID = '1S3VLZ1ZhqNmZJzA4kLoZF--a4AaQiEmm-Mgp3-BkrDY';
 
 const SCOPES = 'https://www.googleapis.com/auth/spreadsheets';
 
